@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 4001;
 
 // Setting up Mongoose.
 const mongoose = require('mongoose');
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/infoapp';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/zuriCluster';
 
 app.use(express.json());
 
