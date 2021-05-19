@@ -112,7 +112,7 @@ app.delete('/details/:id', (req, res) => {
     });
 });
 
-app.use((req, res) => res.send('Welcome to my CRUD app.'));
+app.use((req, res) => res.sendFile('crud-app-homepage.html', {root: __dirname}));
 
 // Listening.
 app.listen(PORT, () => console.log(`The app is listening on port ${PORT}.`));
