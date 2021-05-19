@@ -52,11 +52,11 @@ app.post('/details', (req, res) => {
 // // GET request to /details to fetch all data.
 app.get('/details', (req, res) => {
     // Fetch all details.
-    Detail.find({}, (err, books) => {
+    Detail.find({}, (err, detail) => {
         if (err) {
             return res.status(500).json({message: err});
         } else {
-            return res.status(200).json(books);
+            return res.status(200).json(detail);
         }
     });
 
@@ -112,7 +112,7 @@ app.delete('/details/:id', (req, res) => {
     });
 });
 
-app.use('/', (req, res) => res.send('Welcome to my CRUD app.'));
+app.use((req, res) => res.send('Welcome to my CRUD app.'));
 
 // Listening.
 app.listen(PORT, () => console.log(`The app is listening on port ${PORT}.`));
